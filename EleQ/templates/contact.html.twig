@@ -1,0 +1,13 @@
+{% extends ('base.html.twig') %}
+
+{% block active_contact %} active {% endblock %}
+
+{% block body %}
+    <h1>Contact us page!</h1>
+    <form action="{{ path('contactUs') }}" method="POST">
+                   <div class="modal-footer">
+                        
+                        <button type="submit" class="btn btn-primary">Information</button>
+                    </div>
+                </form>
+{% endblock %}

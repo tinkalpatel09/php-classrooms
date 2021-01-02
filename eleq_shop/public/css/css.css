@@ -1,0 +1,91 @@
+.hs-navbar{
+    background-color: #292929;
+    font-size: 15px;
+}
+.hs-icon{
+    padding-right: 10px;
+    color: #af1e2b;
+}
+.hs-logo{
+    width: 70%;
+    margin: 20px 0 20px 0;
+}
+.hs-search{
+    width: 45%;
+    padding: 9px;
+    margin: 42px 0;
+    border: solid 1px #c3c3c3;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #545454;
+}
+.sf-toolbar{
+    display: none !important;
+}
+.hs-wel{
+    background-color: #292929;
+    color: #f8f8f8;
+    padding: 20px 0;
+}
+.hs-wel i{
+    color: #ae1e2a;
+}
+.hs-wel span{
+    margin: 0 4px;
+}
+.price1{
+    text-decoration: line-through;
+}
+.price2{
+    color: #bf2030;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ffe0e0 !important;
+}
+
+.price2 i{
+    font-size: 25px;
+    color: #bf2030;
+}
+.hs-tit{
+    font-size: 25px;
+    margin-left: 5px;
+}
+.hs-tit i{
+    font-size: 25px;
+    color: #af1e2b;
+}
+.hs-tit span{
+    font-size: 25px;
+    margin-left: 5px;
+}
+.hs-footer{
+    background-color: #292929;
+    color: #f8f8f8;
+    padding: 12px 5px;
+}
+.social i{
+    margin: 0 15px;
+    color: #e24c59;
+}
+.hs-login input{
+
+    background-color: #ae1e2a;;
+}
+.card-img-top{
+    height: 260px;
+}
+.hs-ad i{
+    color: #bf2030;
+    font-size: 25px;
+    position: absolute;
+}
+.hs-ad span{
+    margin-left: 30px;
+}
+.hs-ad{
+    background-color: #e8e8e8;
+    padding: 20px;
+    margin: 10px 0;
+    position:relative;
+}

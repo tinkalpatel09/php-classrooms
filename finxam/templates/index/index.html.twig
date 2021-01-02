@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+    <h1>Hello world</h1>
+    <h1>welcome to comment section</h1>
+<li class="nav-item {% block active_contact %} {% endblock %}">
+                        <a class="nav-link" href="{{ path('comment/create') }}">Contact Us</a>
+                    </li>
+     
+{% endblock %}

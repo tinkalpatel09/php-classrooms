@@ -1,0 +1,15 @@
+sylius:
+    form:
+        channel:
+            color: Color
+            description: Description
+            enabled: Enabled
+            name: Name
+            url: URL
+            type: Type
+    ui:
+        channel:
+            types:
+                website: Website
+                mobile: Mobile
+                pos: POS

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CommentController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for comment in comment %}
+        <td>{{comment.id}}</td>
+        <td>{{comment.title}}</td>
+        <td>{{comment.content}}</td>
+       {% endfor %} 
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+{% endblock %}

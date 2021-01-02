@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">List of all users</h1>
+    </div>
+</div>
+<div class="container">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Usename</th>
+                <th>content</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td><a href="{{ path('user', {id: user.id}) }}">{{ user.username }}</a></td>
+                    <td>{{ user.password }}</td>
+                    <td><a href="{{ path('user_remove', {id: user.id}) }}">Remove</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

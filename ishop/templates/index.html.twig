@@ -1,0 +1,25 @@
+{% extends ('base.html.twig') %}
+
+{% block active_home %} active {% endblock %}
+
+{% block body %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Welcome to iShop!</h1>
+        <p class="lead">We sell Apple products!</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-sm">
+            <div class="img-thumbnail text-center">
+                <img src="{{ asset(product['image']) }}" class="rounded" width="150">
+                <p>{{ product['name'] }}</p>
+                <p>{{ product['price'] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+ <div class="hs-wel mb-5">
+   <div class="container">
+     <div class="row">
+     <div class="col-12">
+       <a href="#">
+       <i class="fas fa-home"></i>
+       </a>
+        <span>/</span>
+         <span>LOGIN</span>
+         <span>/</span>
+        <span>MX Electronics</span>
+     </div>
+     </div>
+  </div>
+</div>
+  <div class="container">
+   <div class="row">
+     <div class="col-2"></div>
+      <div class="col-8 text-center">
+       <form method="post hs-login">
+       {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+       {% endif %}
+       {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+       {% endif %}
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" value="{{ last_username }}" name="email" id="inputEmail" class="form-control mb-2" placeholder="Email" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control mb-3" placeholder="Password" required>
+        <input type="hidden" name="_csrf_token"
+        value="{{ csrf_token('authenticate') }}"
+    </div>
+  
+    <button class="btn btn-lg btn-primary mb-2" type="submit">
+        Sign in
+      </button>
+     </form>
+    </div>
+    <div class="col-2"></div>
+   </div>
+  </div>
+ <div class="container-fluid hs-footer">
+   <div class="row">
+    <div class="col-6">
+     <i class="far fa-copyright"></i>
+      <span>Designed by Nourolhoda Sayadi</span>
+    </div>
+   <div class="col-6 text-right social">
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-google-plus-g"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-facebook-f"></i>
+   </div>
+  </div>
+</div>
+{% endblock %}

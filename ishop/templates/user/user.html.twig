@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">User Profile</h1>
+    </div>
+</div>
+<div class="container">
+    <h5>ID: {{ user.id }}</h5>
+    <h5>Title: {{ user.username }}</h5>
+    <h5>content: {{ user.password }}</h5>
+</div>
+{% endblock %}
